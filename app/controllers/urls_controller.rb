@@ -83,9 +83,4 @@ class UrlsController < ApplicationController
     end
   end
   
-  # GET /:slug
-  def redirect
-    @url = Url.find_by_short_url_slug(params[:slug])
-    redirect_to @url.long_url
-  end
 end

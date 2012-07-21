@@ -3,6 +3,9 @@ Urlshortener::Application.routes.draw do
   
   resources :urls
   
-  match "/:slug" => 'urls#redirect'
+  resources :stats
+  
+  match "/:slug" => 'stats#redirect'
+  
 
 end

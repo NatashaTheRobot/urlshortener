@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719215042) do
+ActiveRecord::Schema.define(:version => 20120720205226) do
+
+  create_table "stats", :force => true do |t|
+    t.integer  "redirects",  :default => 1
+    t.integer  "url_id"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
 
   create_table "urls", :force => true do |t|
     t.string   "long_url"
